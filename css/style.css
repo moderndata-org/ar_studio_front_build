@@ -1,0 +1,153 @@
+@import "vue-draggable-resizable/style.css";
+@font-face {
+  font-family: shabnam;
+  src: url("/font/Shabnam.ttf") format(truetype);
+}
+body {
+  font-family: shabnam;
+  scroll-behavior: smooth !important;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+::selection {
+  @apply !bg-main-600 text-black;
+}
+body * {
+  @apply transition-colors duration-300 [direction:rtl];
+}
+input {
+  @apply outline-none;
+}
+input[type="checkbox"] {
+  @apply text-main-600 focus:!outline-none focus:!ring-0;
+}
+/* utilities class */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+.font-serial {
+  font-family: pelak;
+}
+.title {
+  @apply my-6 w-full text-lg font-semibold;
+}
+.table-wrapper {
+  @apply show-scrollbar min-h-[800px] overflow-x-auto;
+}
+.wrapper-el {
+  @apply mb-5 flex w-full gap-8;
+}
+.component-wrapper {
+  @apply w-full;
+}
+.show-scrollbar::-webkit-scrollbar {
+  display: block;
+  width: 10px;
+}
+.show-scrollbar::-webkit-scrollbar-track {
+  @apply rounded-md bg-[#E7E8E8] dark:bg-[#374151];
+}
+.show-scrollbar::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-main-500;
+}
+.skeleton {
+  @apply animate-pulse border-gray-400/65 bg-[#E5E7EB] duration-[15ms] dark:bg-dark-main;
+}
+.icon {
+  @apply size-7 text-icon-light dark:text-icon-dark;
+}
+.icon-parent {
+  @apply rounded-lg p-2.5 ring-gray-200 hover:bg-gray-200 focus:ring-4 dark:hover:bg-dark-second dark:focus:ring-gray-700;
+}
+.table {
+  @apply relative min-w-full table-fixed divide-y divide-gray-200 dark:divide-gray-600;
+}
+.thead {
+  @apply bg-gray-100 dark:bg-gray-700;
+}
+.th {
+  @apply p-3.5 text-center text-xs text-gray-500 dark:text-gray-400;
+}
+.tbody {
+  @apply divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-800;
+}
+.tr {
+  @apply even:bg-gray-50 hover:bg-gray-100 even:dark:bg-gray-900 dark:hover:bg-gray-700;
+}
+.td {
+  @apply overflow-hidden truncate py-4 text-center text-gray-500 dark:text-gray-400;
+}
+.textarea {
+  @apply show-scrollbar h-[130px] w-full rounded-lg border-gray-300 bg-transparent placeholder:text-gray-400 focus:border-main-600 focus:!ring-main-600 dark:border-gray-600;
+}
+.modal-confirm-btn {
+  @apply float-left rounded-md border border-transparent bg-main-400 px-4 py-2 text-sm font-medium text-black;
+}
+.action-menu {
+  @apply absolute ml-[100px] mt-[140px] min-w-[110px] overflow-hidden rounded-lg bg-[#F3F4F6] *:p-2.5 *:text-[#6b7280] dark:bg-[#374151] dark:*:text-[#9ca3af];
+}
+.wrapper {
+  @apply flex gap-3;
+}
+.state {
+  @apply mx-auto h-fit w-fit rounded-lg border px-4 py-[5.5px] text-center text-sm font-bold;
+}
+.green-state {
+  @apply state border-green-700 bg-green-200/10 text-green-400;
+}
+.yellow-state {
+  @apply state border-yellow-300 bg-yellow-200/10 text-yellow-200;
+}
+.red-state {
+  @apply state border-red-500 bg-red-400/10 text-red-600;
+}
+.blue-state {
+  @apply state border-blue-500 bg-blue-400/10 text-blue-600;
+}
+.purple-state {
+  @apply state border-purple-500 bg-purple-400/10 text-purple-600;
+}
+/* animations  */
+.warn-user:not(.\9) {
+  @apply !border-red-600 !text-red-600 placeholder:!text-red-600;
+}
+.Grid {
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.3) 1px, transparent 1px),
+    linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 1px);
+  background-size:
+    20px 20px,
+    20px 20px;
+}
+.animate-translate {
+  animation: translate 2000ms infinite ease-in-out;
+}
+@keyframes translate {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.shine {
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #d5d4d4 18%, #ececec 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  -webkit-animation: 1.5s shine linear infinite;
+  animation: 1.5s shine linear infinite;
+}
+@-webkit-keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
